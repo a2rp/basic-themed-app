@@ -1,5 +1,7 @@
 # basic-themed-app
 
+![alt text](image.png)
+
 A minimal React + Vite starter with a **premium dark/light design system** baked in.  
 Uses CSS variables (design tokens), a fixed glassy header, and token-driven styled-components.
 
