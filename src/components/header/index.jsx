@@ -1,54 +1,52 @@
-import React, { useEffect, useState } from 'react'
-import { TbSunMoon } from 'react-icons/tb'
-import { Styled } from './styled'
+import { useEffect, useState } from "react";
+import { TbMoon, TbSun } from "react-icons/tb";
+import { Styled } from "./styled";
 
-// --- Theme handling ---
-const THEME_KEY = 'theme'; // 'dark' | 'light'
+const THEME_KEY = "basic-themed-app-theme";
+
 const getInitialTheme = () => {
     try {
-        const saved = localStorage.getItem(THEME_KEY);
-        if (saved === 'light' || saved === 'dark') return saved;
-    } catch { }
-    // fall back to OS preference
-    if (typeof window !== 'undefined' && window.matchMedia) {
-        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        const savedTheme = localStorage.getItem(THEME_KEY);
+        if (savedTheme === "light" || savedTheme === "dark") {
+            return savedTheme;
+        }
+    } catch {
+        // Continue with the system preference when storage is unavailable.
     }
-    return 'dark';
-};
 
+    return window.matchMedia?.("(prefers-color-scheme: light)").matches ? "light" : "dark";
+};
 
 const Header = () => {
     const [theme, setTheme] = useState(getInitialTheme);
 
     useEffect(() => {
-        const root = document.documentElement;
-        root.setAttribute('data-theme', theme);
+        document.documentElement.dataset.theme = theme;
+
         try {
             localStorage.setItem(THEME_KEY, theme);
-        } catch { }
+        } catch {
+            // The theme still works for the current session without storage access.
+        }
     }, [theme]);
 
-    const toggleTheme = () => setTheme((t) => (t === 'light' ? 'dark' : 'light'));
+    const nextTheme = theme === "light" ? "dark" : "light";
 
     return (
-        <>
-            <Styled.Wrapper>
-                <Styled.Main>
-                    <Styled.Name>app-name</Styled.Name>
-                    <Styled.Theme
-                        className="themeToggle"
-                        title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} theme`}
-                        // role="button"
-                        aria-pressed={theme === 'light' ? 'true' : 'false'}
-                        onClick={toggleTheme}
-                    >
-                        <TbSunMoon className='icon' size={18} />
-                    </Styled.Theme>
+        <Styled.Wrapper>
+            <Styled.Main>
+                <Styled.Name>Basic Themed App</Styled.Name>
+                <Styled.Theme
+                    type="button"
+                    aria-label={`Switch to ${nextTheme} theme`}
+                    aria-pressed={theme === "light"}
+                    onClick={() => setTheme(nextTheme)}
+                >
+                    {theme === "light" ? <TbMoon aria-hidden="true" size={20} /> : <TbSun aria-hidden="true" size={20} />}
+                </Styled.Theme>
+            </Styled.Main>
+        </Styled.Wrapper>
+    );
+};
 
-                </Styled.Main>
-            </Styled.Wrapper>
-        </>
-    )
-}
-
-export default Header
+export default Header;

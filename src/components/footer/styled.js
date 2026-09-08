@@ -30,5 +30,10 @@ export const Styled = {
             color: var(--accent);
             border-color: var(--accent);
         }
+        @media (max-width: 560px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
     `,
 };
