@@ -35,7 +35,13 @@ const Header = () => {
     return (
         <Styled.Wrapper>
             <Styled.Main>
-                <Styled.Name>Basic Themed App</Styled.Name>
+                <Styled.Brand>
+                    <Styled.Logo
+                        src={`${import.meta.env.BASE_URL}logo.png`}
+                        alt="Basic Themed App logo"
+                    />
+                    <Styled.Name>Basic Themed App</Styled.Name>
+                </Styled.Brand>
                 <Styled.Theme
                     type="button"
                     aria-label={`Switch to ${nextTheme} theme`}

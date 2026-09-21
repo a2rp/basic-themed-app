@@ -37,6 +37,27 @@ export const Styled = {
             padding: 0 16px;
         }
     `,
+    Brand: styled.div`
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+    `,
+    Logo: styled.img`
+        width: 36px;
+        height: 36px;
+        flex: 0 0 auto;
+        padding: 5px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--card);
+        object-fit: contain;
+        @media (max-width: 560px) {
+            width: 32px;
+            height: 32px;
+            padding: 4px;
+        }
+    `,
     Name: styled.span`
         color: var(--text);
         font-size: 1.05rem;
