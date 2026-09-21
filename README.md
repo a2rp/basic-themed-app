@@ -32,6 +32,10 @@ npm run preview
 
 Live URL: [a2rp.github.io/basic-themed-app](https://a2rp.github.io/basic-themed-app/)
 
+## License
+
+MIT License. See [LICENSE](LICENSE).
+
 ## Links
 
 - Portfolio: [https://www.ashishranjan.net/](https://www.ashishranjan.net/)
@@ -47,7 +51,3 @@ Live URL: [a2rp.github.io/basic-themed-app](https://a2rp.github.io/basic-themed-
 - Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
 - Buy Me A Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
 - Patreon: [https://www.patreon.com/a2rp](https://www.patreon.com/a2rp)
-
-## License
-
-MIT License. See [LICENSE](LICENSE).

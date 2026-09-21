@@ -2,6 +2,17 @@ import styled from "styled-components";
 
 export const Styled = {
     Wrapper: styled.header`
+        @keyframes headerReveal {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         position: fixed;
         inset: 0 0 auto;
         z-index: 10;
@@ -11,6 +22,7 @@ export const Styled = {
         border-bottom: 1px solid var(--border);
         background: var(--surface);
         backdrop-filter: blur(12px);
+        animation: headerReveal 420ms ease-out both;
     `,
     Main: styled.div`
         width: min(100%, var(--maxw));
