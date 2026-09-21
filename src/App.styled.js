@@ -110,4 +110,35 @@ export const Styled = {
         color: var(--muted);
         line-height: 1.65;
     `,
+    BackToTop: styled.button`
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        z-index: 20;
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        background: var(--card);
+        color: var(--text);
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        transition: border-color 160ms ease, box-shadow 160ms ease, text-shadow 160ms ease;
+        &:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 18px var(--accent-soft);
+            text-shadow: 0 0 12px var(--accent);
+        }
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+        @media (max-width: 560px) {
+            right: 16px;
+            bottom: 16px;
+        }
+    `,
 };
