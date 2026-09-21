@@ -42,13 +42,11 @@ export const Styled = {
         background: var(--card);
         color: var(--text);
         cursor: pointer;
-        transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+        transition: border-color 160ms ease, box-shadow 160ms ease, text-shadow 160ms ease;
         &:hover {
             border-color: var(--accent);
-            color: var(--accent);
-        }
-        &:active {
-            transform: translateY(1px);
+            box-shadow: 0 0 16px var(--accent-soft);
+            text-shadow: 0 0 12px var(--accent);
         }
     `,
 };

@@ -1,19 +1,20 @@
 # Basic Themed App
 
-A Vite and React starter with a reusable layout, design tokens, and an accessible light and dark theme switcher.
+![Basic Themed App preview](screenshot.png)
+
+A small Vite and React starter for building responsive interfaces with a persistent light and dark theme.
 
 ## Features
 
-- Vite and React 18.
-- Styled-components for component-level layout styles.
-- CSS design tokens for colors, surfaces, borders, and spacing.
-- Light and dark theme modes.
-- Theme preference persisted in local storage.
-- System theme used when no preference has been saved.
-- Responsive shell with a fixed header and footer.
-- Accessible keyboard-friendly theme button.
-- GitHub Pages deployment with a generated 404 fallback.
-- No test setup or unnecessary UI framework dependencies.
+- Light and dark themes with local storage persistence.
+- System theme fallback for first-time visitors.
+- Responsive layout with a fixed header and icon-only footer links.
+- Styled-components and CSS design tokens.
+- GitHub Pages deployment setup.
+
+## Tech stack
+
+React 18, Vite, styled-components, React Icons, and CSS.
 
 ## Run locally
 
@@ -22,64 +23,18 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite.
-
-## Build and preview
+Build and preview the production version:
 
 ```powershell
 npm run build
 npm run preview
 ```
 
-## Deploy to GitHub Pages
-
-```powershell
-npm run deploy
-```
-
-The app is configured for:
-
-https://a2rp.github.io/basic-themed-app/
-
-## Project structure
-
-```text
-src/
-  components/
-    header/       Theme switcher and app header
-    footer/       Site footer
-  App.jsx         Main themed content
-  App.styled.js   Page layout styles
-  index.css       Theme tokens and global styles
-  main.jsx        React entry point
-```
-
-## Author
-
-**Ashish Ranjan**
-Full-Stack Web Developer
-
-- Portfolio: [ashishranjan.net](https://www.ashishranjan.net/)
-- GitHub: [github.com/a2rp](https://github.com/a2rp)
-- CodePen: [codepen.io/ash1198](https://codepen.io/ash1198)
-- LinkedIn: [linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
-- Facebook: [facebook.com/theash.ashish](https://www.facebook.com/theash.ashish/)
-- YouTube: [Ashish Ranjan](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
-- Email: [ash.ranjan09@gmail.com](mailto:ash.ranjan09@gmail.com)
-
-## Support
-
-- [Support page](https://a2rp-donation-page.netlify.app/)
-- [Buy Me a Coffee](https://buymeacoffee.com/a2rp)
-- [Patreon](https://www.patreon.com/a2rp)
-
-## License
-
-This project is available under the MIT License. See [LICENSE](LICENSE).
+Live URL: [a2rp.github.io/basic-themed-app](https://a2rp.github.io/basic-themed-app/)
 
 ## Links
 
-- Portfolio: [https://www.ashishranjan.net](https://www.ashishranjan.net)
+- Portfolio: [https://www.ashishranjan.net/](https://www.ashishranjan.net/)
 - GitHub: [https://github.com/a2rp](https://github.com/a2rp)
 - CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)
 - LinkedIn: [https://www.linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
@@ -91,4 +46,8 @@ This project is available under the MIT License. See [LICENSE](LICENSE).
 
 - Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
 - Buy Me A Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://patreon.com/a2rp](https://patreon.com/a2rp)
+- Patreon: [https://www.patreon.com/a2rp](https://www.patreon.com/a2rp)
+
+## License
+
+MIT License. See [LICENSE](LICENSE).

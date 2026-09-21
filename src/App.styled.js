@@ -55,9 +55,11 @@ export const Styled = {
         color: #06101e;
         font-weight: 800;
         text-decoration: none;
+        transition: border-color 160ms ease, box-shadow 160ms ease, text-shadow 160ms ease;
         &:hover {
-            color: #06101e;
-            filter: brightness(1.1);
+            border-color: var(--text);
+            box-shadow: 0 0 18px var(--accent-soft);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
         }
     `,
     SecondaryLink: styled.a`
@@ -67,9 +69,11 @@ export const Styled = {
         color: var(--text);
         font-weight: 800;
         text-decoration: none;
+        transition: border-color 160ms ease, box-shadow 160ms ease, text-shadow 160ms ease;
         &:hover {
-            background: var(--accent-soft);
-            color: var(--accent);
+            border-color: var(--accent);
+            box-shadow: 0 0 18px var(--accent-soft);
+            text-shadow: 0 0 12px var(--accent);
         }
     `,
     FeatureGrid: styled.section`
@@ -87,6 +91,14 @@ export const Styled = {
         border-radius: var(--radius);
         background: var(--card);
         box-shadow: var(--shadow);
+        transition: border-color 160ms ease, box-shadow 160ms ease, text-shadow 160ms ease;
+        &:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 22px var(--accent-soft);
+            h2 {
+                text-shadow: 0 0 12px var(--accent);
+            }
+        }
     `,
     FeatureTitle: styled.h2`
         margin: 0 0 10px;
